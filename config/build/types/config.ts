@@ -12,10 +12,12 @@ export interface BuildOptions {
     isDev: boolean
     port: number
     apiUrl: string
+    analyze: boolean
 }
 
 export interface BuildEnv {
     port: number
     mode: BuildMode
     apiUrl: string
+    analyze: boolean
 }

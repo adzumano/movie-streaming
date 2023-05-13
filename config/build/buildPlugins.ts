@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 import { type BuildOptions } from './types/config'
 
-export function buildPlugins({ paths, isDev, apiUrl }: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, apiUrl, analyze }: BuildOptions): WebpackPluginInstance[] {
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html
@@ -24,10 +24,11 @@ export function buildPlugins({ paths, isDev, apiUrl }: BuildOptions): WebpackPlu
 
     if (isDev) {
         plugins.push(new ReactRefreshPlugin())
+    }
+
+    if (analyze) {
         plugins.push(
-            new BundleAnalyzerPlugin({
-                openAnalyzer: false
-            })
+            new BundleAnalyzerPlugin()
         )
     }
 
