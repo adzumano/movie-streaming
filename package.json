@@ -7,7 +7,10 @@
     "start": "webpack serve --env port=3000",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "analyze": "webpack --env mode=production analyze=true"
+    "analyze": "webpack --env mode=production analyze=true",
+    "lint:ts": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
+    "lint:ts:fix":  "eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
+    "format": "prettier --write src !**/*.{scss,css,json}"
   },
   "keywords": [],
   "author": "Karagoishin Zhaslan",
@@ -19,6 +22,7 @@
     "@babel/preset-typescript": "^7.21.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@svgr/webpack": "^6.5.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.14.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -35,6 +39,7 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.8",
     "react-refresh": "^0.14.0",
     "sass": "^1.58.3",
     "sass-loader": "^13.2.0",
