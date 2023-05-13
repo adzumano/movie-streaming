@@ -1,1 +1,0 @@
-export const someFn = (arg: number) => console.log(arg)
