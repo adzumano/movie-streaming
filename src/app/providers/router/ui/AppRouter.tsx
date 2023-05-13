@@ -1,4 +1,4 @@
-import { routeConfig } from 'app/provider/router';
+import { routeConfig } from 'app/providers/router';
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
