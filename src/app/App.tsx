@@ -15,6 +15,7 @@ export const App = () => {
             <Header />
             <Suspense fallback={'loading..'}>
                 <AppRouter />
+                <div>test</div>
             </Suspense>
         </div>
     );
