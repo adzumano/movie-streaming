@@ -1,5 +1,6 @@
 import { App } from 'app/App';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import { StoreProvider } from 'app/providers/store';
 import 'app/styles/index.scss';
 import React, { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -11,9 +12,11 @@ root.render(
     <StrictMode>
         <ErrorBoundary>
             <BrowserRouter>
-                <Suspense fallback={'loading..'}>
-                    <App />
-                </Suspense>
+                <StoreProvider>
+                    <Suspense fallback={'loading..'}>
+                        <App />
+                    </Suspense>
+                </StoreProvider>
             </BrowserRouter>
         </ErrorBoundary>
     </StrictMode>,

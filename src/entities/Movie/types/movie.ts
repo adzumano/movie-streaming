@@ -1,3 +1,5 @@
+import { IResponse, Replace } from 'shared/types';
+
 export interface IMovie {
     id: string;
     name: string;
@@ -5,3 +7,5 @@ export interface IMovie {
     date: Date;
     genre: string;
 }
+
+export type TMovieSchema = Replace<IResponse<IMovie[]>, 'results', IMovie[]>;
