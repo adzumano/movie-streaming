@@ -1,3 +1,13 @@
 .card {
-  @apply text-transparent
+  @apply rounded-[20px] min-w-[255px] max-w-[348px] w-full min-h-[259px] border border-solid border-gray relative
+}
+
+.description {
+  @apply w-full h-[86px] absolute bottom-0 rounded-b-[20px] backdrop-blur-[10px] px-[20px] py-[16px] bg-no-repeat bg-center bg-cover;
+
+  background: linear-gradient(148deg, #FFF 0%, rgb(255 255 255 / 0%) 100%);
+}
+
+.info {
+  @apply mt-[6px]
 }
