@@ -3,7 +3,7 @@ import { MovieList } from 'widgets/MovieList';
 const MainPage = (): JSX.Element => {
     return (
         <div>
-            <MovieList />
+            <MovieList title={'Trending at this moment'} />
         </div>
     );
 };
