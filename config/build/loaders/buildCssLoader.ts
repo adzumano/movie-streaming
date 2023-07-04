@@ -17,7 +17,8 @@ export const buildCssLoader = (isDev: boolean): RuleSetRule => {
                     }
                 }
             },
-            'sass-loader'
+            'sass-loader',
+            'postcss-loader'
         ]
     }
 }

@@ -1,5 +1,11 @@
+import { MovieCard } from 'entities/Movie';
+
 const MainPage = (): JSX.Element => {
-    return <div>MainPage</div>;
+    return (
+        <div>
+            <MovieCard />
+        </div>
+    );
 };
 
 export default MainPage;
