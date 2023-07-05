@@ -1,0 +1,23 @@
+.form {
+  @apply flex flex-col max-w-[225px] w-full
+}
+
+.logo {
+  @apply mx-auto
+}
+
+.title {
+  @apply text-md text-white text-center mt-[16px]
+}
+
+.btn {
+  @apply mt-[40px]
+}
+
+.helpText {
+  @apply text-md text-white text-center mt-[16px]
+}
+
+.link {
+  @apply font-medium underline
+}

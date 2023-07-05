@@ -1,14 +1,9 @@
-import { AppRouter } from 'app/providers/router';
-import { Suspense } from 'react';
-import { Header } from 'widgets/Header';
+import { PublicLayout } from './layouts';
 
 export const App = () => {
     return (
-        <div className={'app'}>
-            <Header />
-            <Suspense fallback={'loading..'}>
-                <AppRouter />
-            </Suspense>
-        </div>
+        <main className={'app'}>
+            <PublicLayout />
+        </main>
     );
 };

@@ -1,12 +1,9 @@
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, ImgHTMLAttributes } from 'react';
 
 import styles from './Avatar.module.scss';
 
-interface IAvatarProps {
-    className?: string;
-    src: string;
-    alt: string;
+interface IAvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
     size?: number;
 }
 export const Avatar: FC<IAvatarProps> = (props) => {
