@@ -1,10 +1,16 @@
-import React from 'react';
-import Heart from 'shared/asssets/svg/heart.svg';
+import React, { FC } from 'react';
+import { ReactComponent as Heart } from 'shared/assets/svg/heart.svg';
 
-export const AddToFavorite = () => {
+import styles from './AddToFavorite.module.scss';
+
+interface IAddToFavoriteProps {
+    isFavorite?: boolean;
+}
+export const AddToFavorite: FC<IAddToFavoriteProps> = (props) => {
+    const { isFavorite = false } = props;
     return (
-        <div>
-            <Heart />
+        <div className={styles.block}>
+            <Heart fill={isFavorite ? '#6100C2' : 'none'} />
         </div>
     );
 };

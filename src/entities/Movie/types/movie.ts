@@ -4,8 +4,12 @@ export interface IMovie {
     id: string;
     name: string;
     url: string;
-    date: Date;
+    date: string;
     genre: string;
+    rating: number;
+    duration: number;
+    description: string;
+    isFavorite: boolean;
 }
 
 export type TMovieSchema = Replace<IResponse<IMovie[]>, 'results', IMovie[]>;

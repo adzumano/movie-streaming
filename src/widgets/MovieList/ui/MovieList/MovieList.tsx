@@ -1,6 +1,6 @@
-import { getAllMoviesSelector } from 'entities/Movie';
+import { IMovie, getAllMoviesSelector, movieDetailActions } from 'entities/Movie';
 import React, { FC } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Heading, List } from 'shared/ui';
 
 import { MovieCard } from '../MovieCard/MovieCard';
@@ -12,6 +12,9 @@ interface IMovieListProps {
 export const MovieList: FC<IMovieListProps> = (props) => {
     const { title } = props;
     const { results } = useSelector(getAllMoviesSelector);
+    const dispatch = useDispatch();
+
+    const handleSelected = (movie: IMovie) => dispatch(movieDetailActions.selectedMovie(movie));
     return (
         <div>
             {title ? (
@@ -23,7 +26,7 @@ export const MovieList: FC<IMovieListProps> = (props) => {
                 className={styles.list}
                 items={results}
                 renderItem={(movie) => (
-                    <li key={movie.id}>
+                    <li key={movie.id} onClick={() => handleSelected(movie)}>
                         <MovieCard url={movie.url} name={movie.name} date={movie.date} genre={movie.genre} />
                     </li>
                 )}

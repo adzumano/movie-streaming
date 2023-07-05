@@ -3,6 +3,6 @@ import { type RuleSetRule } from 'webpack'
 export const buildSvgLoader = (): RuleSetRule => {
     return {
         test: /\.svg$/,
-        use: ['@svgr/webpack']
+        use: ['@svgr/webpack', 'url-loader']
     }
 }

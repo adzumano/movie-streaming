@@ -1,0 +1,5 @@
+.block {
+  @apply w-[32px] h-[32px] flex justify-center items-center rounded-[8.296px] backdrop-blur-[5.9px] cursor-pointer;
+
+  background: linear-gradient(148deg, #FFF 0%, rgb(255 255 255 / 0%) 100%);
+}
