@@ -1,5 +1,5 @@
-import { AppRouter } from 'app/providers/router';
 import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Header } from 'widgets/Header';
 
 export const PrivateLayout = () => {
@@ -7,7 +7,7 @@ export const PrivateLayout = () => {
         <>
             <Header />
             <Suspense fallback={'loading..'}>
-                <AppRouter />
+                <Outlet />
             </Suspense>
         </>
     );

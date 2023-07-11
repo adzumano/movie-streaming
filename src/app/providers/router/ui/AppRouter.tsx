@@ -6,7 +6,7 @@ export const AppRouter = (): JSX.Element => {
     return (
         <Suspense fallback={'page loading ...'}>
             <Routes>
-                {routeConfig.map(({ path, element }) => (
+                {Object.values(routeConfig).map(({ path, element }) => (
                     <Route key={path} path={path} element={element} />
                 ))}
             </Routes>

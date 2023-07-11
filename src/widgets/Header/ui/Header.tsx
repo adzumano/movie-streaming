@@ -1,13 +1,25 @@
 import cn from 'classnames';
+import { nanoid } from 'nanoid';
 import { FC, memo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { List } from 'shared/ui';
 
 import cls from './Header.module.scss';
 
 interface NavbarProps {
     className?: string;
 }
+
+const links = [
+    { id: nanoid(), text: 'Movies' },
+    { id: nanoid(), text: 'Series' },
+    { id: nanoid(), text: 'Documentaries' },
+];
 export const Header: FC<NavbarProps> = memo(({ className }) => {
-    const { t } = useTranslation();
-    return <header className={cn(cls.Header, className)}>{t('test')}</header>;
+    return (
+        <header className={cn(cls.header, className)}>
+            <nav>
+                <List items={links} renderItem={({ id, text }) => <li key={id}>{text}</li>} />
+            </nav>
+        </header>
+    );
 });

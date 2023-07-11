@@ -7,7 +7,7 @@
 }
 
 .title {
-  @apply text-md text-white text-center mt-[16px]
+  @apply text-md text-white text-center mt-[16px] mb-[16px]
 }
 
 .btn {
@@ -20,4 +20,8 @@
 
 .link {
   @apply font-medium underline
+}
+
+.input {
+  @apply mt-[8px]
 }

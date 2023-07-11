@@ -1,9 +1,9 @@
-import { PublicLayout } from './layouts';
+import { AppRouter } from 'app/providers/router';
 
 export const App = () => {
     return (
         <main className={'app'}>
-            <PublicLayout />
+            <AppRouter />
         </main>
     );
 };

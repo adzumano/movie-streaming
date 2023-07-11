@@ -1,6 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import { Button, Heading, Logo } from 'shared/ui';
+import { Button, Heading, Input, Logo } from 'shared/ui';
 
 import styles from './LoginForm.module.scss';
 
@@ -17,8 +17,8 @@ export const LoginForm = () => {
             <Heading className={styles.title} level={'p'}>
                 Enjoy the newest movies
             </Heading>
-            <input {...register('username')} />
-            <input {...register('password')} />
+            <Input className={styles.input} {...register('username')} placeholder={'username'} />
+            <Input className={styles.input} {...register('password')} placeholder={'password'} />
             <Button className={styles.btn} type={'submit'}>
                 Log in
             </Button>
