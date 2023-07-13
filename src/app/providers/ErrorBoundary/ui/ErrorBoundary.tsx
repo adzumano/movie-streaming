@@ -1,19 +1,14 @@
 import { Component, type ErrorInfo, type ReactNode, Suspense } from 'react';
 
-interface Props {
-    children?: ReactNode;
-}
+import { IProps, IState } from '../types';
 
-interface State {
-    hasError: boolean;
-}
-export class ErrorBoundary extends Component<Props, State> {
-    constructor(props: Props) {
+export class ErrorBoundary extends Component<IProps, IState> {
+    constructor(props: IProps) {
         super(props);
         this.state = { hasError: false };
     }
 
-    static getDerivedStateFromError(): State {
+    static getDerivedStateFromError(): IState {
         return { hasError: true };
     }
 

@@ -1,9 +1,7 @@
-import { AppRouter } from 'app/providers/router';
+import { withProviders } from './providers';
 
-export const App = () => {
-    return (
-        <main className={'app'}>
-            <AppRouter />
-        </main>
-    );
+const App = () => {
+    return <main className={'app'}>{/*<AppRouter />*/}</main>;
 };
+
+export default withProviders(App);

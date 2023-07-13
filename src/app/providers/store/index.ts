@@ -1,1 +1,1 @@
-export { StoreProvider } from './ui/StoreProvider/StoreProvider';
+export { withStore } from './ui/WithStore';
