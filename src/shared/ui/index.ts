@@ -5,3 +5,4 @@ export { Logo } from './Logo/Logo';
 export { Button } from './Button/Button';
 export { Avatar } from './Avatar/Avatar';
 export { Input } from './Input/Input';
+export { Loadable } from './Loadable/Loadable';

@@ -1,15 +1,15 @@
-import { routeConfig } from 'app/providers/router';
-import { Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { PrivateLayout } from 'app/layouts';
+import { MainPage } from 'pages/MainPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
+import { Navigate, useRoutes } from 'react-router-dom';
 
-export const AppRouter = (): JSX.Element => {
-    return (
-        <Suspense fallback={'page loading ...'}>
-            <Routes>
-                {Object.values(routeConfig).map(({ path, element }) => (
-                    <Route key={path} path={path} element={element} />
-                ))}
-            </Routes>
-        </Suspense>
-    );
+export const AppRouter = () => {
+    return useRoutes([
+        {
+            element: <PrivateLayout />,
+            children: [{ path: '/', element: <MainPage /> }],
+        },
+        { path: '404', element: <NotFoundPage /> },
+        { path: '*', element: <Navigate to={'/404'} replace /> },
+    ]);
 };

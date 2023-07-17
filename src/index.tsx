@@ -1,12 +1,5 @@
 import App from 'app/App';
-import 'app/styles/index.scss';
-import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import 'shared/config/i18n/i18n';
+import { createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(
-    <StrictMode>
-        <App />
-    </StrictMode>,
-);
+const root = createRoot(document.getElementById('root') as HTMLElement);
+root.render(<App />);
