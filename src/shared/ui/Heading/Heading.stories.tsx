@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Heading} from "./Heading";
+
+import { Heading } from './Heading';
 
 const meta = {
     title: 'shared/Heading',
@@ -17,51 +18,48 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         level: 'p',
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const Level1: Story = {
     args: {
         level: 'h1',
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const Level2: Story = {
     args: {
         level: 'h2',
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const Level3: Story = {
     args: {
         level: 'h3',
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const Level4: Story = {
     args: {
         level: 'h4',
-        children: 'Text'
+        children: 'Text',
     },
 };
-
 
 export const Level5: Story = {
     args: {
         level: 'h5',
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const Level6: Story = {
     args: {
         level: 'h6',
-        children: 'Text'
+        children: 'Text',
     },
 };
-
-

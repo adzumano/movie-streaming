@@ -1,13 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {List} from "./List";
-import {nanoid} from "nanoid";
+import { nanoid } from 'nanoid';
 
-const mockData = [
-    {id: nanoid()},
-    {id: nanoid()},
-    {id: nanoid()},
-    {id: nanoid()},
-]
+import { List } from './List';
+
+const mockData = [{ id: nanoid() }, { id: nanoid() }, { id: nanoid() }, { id: nanoid() }];
 
 const meta = {
     title: 'shared/List',
@@ -25,9 +21,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         items: mockData,
-        renderItem: (item: any) => (
-            <li>List {item.id}</li>
-        )
+        renderItem: (item: any) => <li>List {item.id}</li>,
     },
 };
-

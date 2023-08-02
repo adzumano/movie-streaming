@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Logo} from "./Logo";
+
+import { Logo } from './Logo';
 
 const meta = {
     title: 'shared/Logo',
@@ -16,4 +17,3 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {},
 };
-

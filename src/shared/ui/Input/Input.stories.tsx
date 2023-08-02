@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Input} from "./Input";
+
+import { Input } from './Input';
 
 const meta = {
     title: 'shared/Input',
@@ -19,7 +20,6 @@ export const Default: Story = {
         name: 'input',
         placeholder: 'placeholder',
         value: 'test',
-        onChange: (e) => e.target.value
+        onChange: (e) => e.target.value,
     },
 };
-

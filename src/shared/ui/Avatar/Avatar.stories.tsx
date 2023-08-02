@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Avatar} from "./Avatar";
-import AvatarImg from 'shared/assets/img/avatar.png'
+import AvatarImg from 'shared/assets/img/avatar.png';
+
+import { Avatar } from './Avatar';
 
 const meta = {
     title: 'shared/Avatar',
@@ -18,7 +19,6 @@ export const Default: Story = {
     args: {
         src: AvatarImg,
         alt: 'Image',
-        size: 32
+        size: 32,
     },
 };
-
